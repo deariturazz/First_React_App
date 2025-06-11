@@ -1,0 +1,22 @@
+.abc {
+  font-weight: bold !important;
+  font-size: 70px;
+  margin: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+}
+
+.item-container {
+  text-align: left !important;
+}
+
+.app-row {
+  margin: 17px 3px;
+}
+
+.app-button {
+  min-width: 100px;
+}
