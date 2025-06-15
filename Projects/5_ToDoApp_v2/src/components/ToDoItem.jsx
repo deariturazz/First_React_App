@@ -1,4 +1,5 @@
-function ToDoItem2({ TodoItem, TodoDate }) {
+function ToDoItem({ TodoItem, TodoDate }) {
+  console.log(TodoItem, TodoDate);
   return (
     <div className="container item-container">
       <div className="row app-row">
@@ -12,4 +13,4 @@ function ToDoItem2({ TodoItem, TodoDate }) {
   );
 }
 
-export default ToDoItem2;
+export default ToDoItem;
