@@ -1,17 +1,5 @@
 .calculator {
   border: 1px solid #c0bfbf;
   border-radius: 5px;
-  width: 300px;
-}
-
-.buttonsContainer {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.button {
-  width: 40px;
-  height: 40px;
-  margin: 5px;
+  width: 200px;
 }
