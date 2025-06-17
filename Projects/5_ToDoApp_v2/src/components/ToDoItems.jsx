@@ -1,6 +1,5 @@
 import ToDoItem from "./ToDoItem";
 const TodoItems = ({ toDoItemList }) => {
-  //console.log(toDoItemList);
   return (
     <div className="item-container">
       {toDoItemList.map((item) => (
