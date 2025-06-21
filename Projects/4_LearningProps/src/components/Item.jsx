@@ -1,9 +1,6 @@
 import styles from "./Items.module.css";
 
-const Item = ({ foodItem }) => {
-  const handleClick = () => {
-    alert(`${foodItem} clicked`);
-  };
+const Item = ({ foodItem, handleClick }) => {
   return (
     <li className={`${styles.item} list list-group-item`}>
       <span className={styles.span}>{foodItem}</span>

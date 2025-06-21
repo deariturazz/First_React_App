@@ -7,12 +7,15 @@ import FoodInput from "./components/FoodInput";
 
 function App() {
   let foodItems = ["Apple", "Banana", "Carrot", "Doughnut", "Eggplant"];
+  const onChange = (event) => {
+    alert(event.target.value);
+  };
   return (
     <>
       <Container>
         <h1>Healthy Foods</h1>
         <ErrorMessage items={foodItems}></ErrorMessage>
-        <FoodInput></FoodInput>
+        <FoodInput onChange={onChange}></FoodInput>
         <FoodItems items={foodItems}></FoodItems>
       </Container>
       <Container>
