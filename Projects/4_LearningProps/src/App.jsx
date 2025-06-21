@@ -4,12 +4,22 @@ import FoodItems from "./components/FoodItems";
 import ErrorMessage from "./components/ErrorMessage";
 import Container from "./components/Container";
 import FoodInput from "./components/FoodInput";
+import { useState } from "react";
 
 function App() {
-  let foodItems = ["Apple", "Banana", "Carrot", "Doughnut", "Eggplant"];
+  //let foodItems = ["Apple", "Banana", "Carrot", "Doughnut", "Eggplant"];
+
+  const [foodItems, setfoodItems] = useState([]);
+
   const onChange = (event) => {
-    alert(event.target.value);
+    if (event.key === "Enter") {
+      let newFoodItem = event.target.value.trim();
+      event.target.value = ""; // Clear the input field after adding the item
+      let newItems = [...foodItems, newFoodItem];
+      setfoodItems(newItems);
+    }
   };
+
   return (
     <>
       <Container>

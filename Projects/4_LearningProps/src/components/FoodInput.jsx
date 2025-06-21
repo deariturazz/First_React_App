@@ -5,7 +5,8 @@ const FoodInput = ({ onChange }) => {
       type="text"
       className={styles.foodinput}
       placeholder="Enter food items here"
-      onChange={onChange}
+      onKeyDown={onChange}
+      id="foodinput"
     ></input>
   );
 };
