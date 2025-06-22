@@ -1,9 +1,13 @@
+import { useState } from "react";
 import Item from "./Item";
 const FoodItems = ({ items }) => {
-  //let foodItems = ["Apple", "Banana", "Carrot", "Doughnut", "Eggplant"];
-  const handleClick = (item) => {
-    alert(`${item} clicked`);
+  let [bought, setBought] = useState([]);
+
+  const handleBought = (item, event) => {
+    const newItems = [...bought, item];
+    setBought(newItems);
   };
+
   return (
     <ul className="list-group">
       {items.map((item) => (
@@ -11,7 +15,8 @@ const FoodItems = ({ items }) => {
           key={item}
           foodItem={item}
           item={item}
-          handleClick={() => handleClick(item)}
+          bought={bought.includes(item)}
+          handleClick={() => handleBought(item)}
         />
       ))}
     </ul>
